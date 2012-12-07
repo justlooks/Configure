@@ -8,6 +8,11 @@ set nobackup
 set nowb
 set noswapfile
 
+set fileencodings=utf-8
+set termencoding=utf-8
+set encoding=prc
+
+
 set laststatus=2
 set statusline=file:%F\ %h%m%r\ [TYPE=%Y]\ [Buffer=%n]\ %=\ Line:%l/%L\ Col:%c%V\ %P
 iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
