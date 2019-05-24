@@ -1,0 +1,36 @@
+# create necessary dir
+# mkdir -p ~/.mutt/cache
+# mkdir ~/.mutt/cache/bodies
+# touch ~/.mutt/certificates
+set realname = "your name"
+set from = "username@gmail.com"
+set use_from = yes
+set envelope_from = yes
+#set imap_keepalive = 900
+
+# Protocol: smtp for TLS (587), smtps for SSL (465)
+set smtp_url = "smtps://username@gmail.com@smtp.gmail.com:465/"
+set smtp_pass = "gmail password or google app secrete password"
+set imap_user = "username@gmail.com"
+set imap_pass = "gmail password or google app secrete password"
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set postponed = "+[Gmail]/Drafts"
+set header_cache = ~/.mutt/cache/headers
+set message_cachedir = ~/.mutt/cache/bodies
+set certificate_file = ~/.mutt/certificates
+set move = no
+set smtp_authenticators = 'login'
+set ssl_force_tls = yes
+set ssl_starttls = yes
+
+bind index G imap-fetch-mail
+set editor = "vim"
+set charset = "utf-8"
+set record = ''
+
+# send a mail
+# echo "This is a test message." > ~/.mutt/tst-msg.txt
+# mutt -s "Test Mutt" [email address] < ~/.mutt/tst-msg.txt
+# send a mail with attachment
+# mutt -s "Test Mutt" [email address] < ~/.mutt/tst-msg.txt -a ~/.mutt/tst-msg.txt
